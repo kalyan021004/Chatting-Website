@@ -12,6 +12,7 @@
         <button>New Chat</button>
         <br>
     </form>
+
     <% for(let chat of chats) { %>
         <div class="chat <% if(chat.from === 'You') { %> sent <% } else { %> received <% } %>">
             <p>From: <%= chat.from %></p>
@@ -22,15 +23,19 @@
                 </form>
             </div>
             <p>Received by: <%= chat.to %></p>
-            <p><%= chat.created_at.toString().split(" ")[4] %></p>
-            <p><%= chat.created_at.toString().split(" ").slice(0,4).join(" ") %> </p>
+
+            <% if (chat.created_at) { %>
+                <p><%= chat.created_at.toString().split(" ")[4] %></p>
+                <p><%= chat.created_at.toString().split(" ").slice(0,4).join(" ") %></p>
+            <% } else { %>
+                <p><em>Timestamp not available</em></p>
+            <% } %>
+
             <form method="POST" action="/chats/<%=chat._id %>?_method=DELETE">
                 <button class="delete">Delete</button>
             </form>
         </div>
         <hr>
     <% } %>
-    
-
 </body>
 </html>
