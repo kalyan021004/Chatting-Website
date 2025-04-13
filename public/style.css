@@ -1,0 +1,95 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e5ddd5;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Heading */
+h3 {
+    color: #075e54;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* New Chat Button */
+form[action="/chats/new"] button {
+    background-color: #25d366;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form[action="/chats/new"] button:hover {
+    background-color: #1da851;
+}
+
+/* Chat Container */
+.chat {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 60%;
+    margin: 15px auto;
+    text-align: left;
+}
+
+/* Chat Messages */
+.msg {
+    background-color: #dcf8c6;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 5px;
+    display: inline-block;
+    max-width: 80%;
+}
+
+/* Timestamps */
+.chat p:last-child {
+    font-size: 12px;
+    color: gray;
+}
+
+/* Buttons */
+button {
+    cursor: pointer;
+    border: none;
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+/* Edit Button */
+.edit {
+    background-color: #ffcc00;
+    color: black;
+}
+
+.edit:hover {
+    background-color: #e6b800;
+}
+
+/* Delete Button */
+.delete {
+    background-color: #ff3b30;
+    color: white;
+}
+
+.delete:hover {
+    background-color: #cc2e25;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .chat {
+        width: 90%;
+    }
+}
